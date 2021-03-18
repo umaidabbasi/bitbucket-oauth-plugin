@@ -124,7 +124,7 @@ public class BitbucketApiService {
         InputStreamReader reader = null;
         UserDetails userResponce = null;
         try {
-            URL url = new URL(API2_ENDPOINT + "users/" + username);
+            URL url = new URL(API2_ENDPOINT + "teams/" + username);
             reader = new InputStreamReader(url.openStream(), "UTF-8");
             Gson gson = new Gson();
             userResponce = gson.fromJson(reader, BitbucketUser.class);
